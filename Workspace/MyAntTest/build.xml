@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="MyAntTestDevPro" default="runTests" basedir=".">
+	<description>
+		Build du projet MyAntTest
+	</description>
+
+	<target name="init">
+		<echo message="Initialisation de ${ant.project.name} en cours ..."/>
+		<property file="build.properties"/>
+		<condition property="bin" else="bin">
+			<isset property="bin"/>
+		</condition>
+		<condition property="authors" else="Me">
+			<isset property="authors"/>
+		</condition>
+		<condition property="sourceVersion" else="1.0">
+			<isset property="sourceVersion"/>
+		</condition>
+		<condition property="encoding" else="ISO-8859-1">
+			<isset property="encoding"/>
+		</condition>
+		<condition property="classPath" else="fr.isima.myanttest">
+			<isset property="classPath"/>
+		</condition>
+		<!-- COBERTURA -->
+		<delete dir="${reportcobertura}"/>
+		<delete dir="${instrumentedbin}"/>
+		<delete file="cobertura.ser"/>
+			<path id="cobertura.classpath">
+				<fileset dir="${lib}${cobertura}">
+					<include name="${cobertura}.jar" />
+			        <include name="lib/**/*.jar" />
+				</fileset>
+			</path>
+			<taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
+			
+			<cobertura-instrument todir="${instrumentedbin}" datafile="cobertura.ser">
+				<fileset dir="${ext}${bin}">
+					<include name="**/*.class"/>
+				</fileset>
+				<fileset dir="${ext.2}${bin}">
+					<include name="**/*.class"/>
+				</fileset>
+			</cobertura-instrument>
+			
+		<!-- END COBERTURA -->
+	</target>
+
+	<target name="compile" depends="init">
+		<echo message="Compilation des tests en cours ..."/>
+		<mkdir dir="${bin}"/>
+		<javac srcdir="${src}"
+         destdir="${bin}"
+         classpath="${classPath}"
+         debug="on"
+		 includeantruntime="true">
+		<classpath>
+			<pathelement location="${bin}" />
+        	<path location="${lib}**/*.jar" />
+      	</classpath>
+		</javac>
+	</target>
+
+	<target name="clean">
+		<echo message="Nettoyage en cours ..."/>
+		<delete dir="${bin}"/>
+	</target>
+	
+	<target name="runTests" depends="compile" >
+		<echo message="Tests en cours ..."/>
+		<junit haltonfailure="true" printsummary="yes" fork="true" dir=".">
+			<sysproperty key="net.sourceforge.cobertura.datafile"
+			        file="${basedir}/cobertura.ser" />
+			<classpath location="${lib.test}junit.jar" />
+			<classpath location="${lib.test}hamcrest.jar" />
+			<classpath location="${instrumentedbin}" />
+			<classpath location="${bin}" />
+			<classpath location="${ext}${bin}" />
+			<classpath location="${ext.2}${bin}" />
+			<classpath refid="cobertura.classpath" />
+			<formatter type="xml" />
+			<test name="${classPath}.${testsuite}" outfile="${resultfile}" />
+		</junit>
+				
+		<cobertura-report destdir="${reportcobertura}" datafile="cobertura.ser" srcdir="${ext}${src}">
+			<fileset dir="${ext.2}${src}">
+				<include name="**/*.java" />				
+			</fileset>
+		</cobertura-report>
+	</target>
+	
+</project>

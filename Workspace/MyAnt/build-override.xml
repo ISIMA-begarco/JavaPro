@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Override" default="TARGET2" basedir=".">
+	<description>
+		Test de réécriture
+	</description>
+	
+	<import file="echo.xml"/>
+
+	<target name="TARGET1">
+		<echo message="Execution of TARGET1."/>
+	</target>
+
+	<target name="TARGET2" depends="TARGET1">
+		<echo message="Execution of TARGET2 using javac."/>
+		<javac/>
+	</target>
+</project>

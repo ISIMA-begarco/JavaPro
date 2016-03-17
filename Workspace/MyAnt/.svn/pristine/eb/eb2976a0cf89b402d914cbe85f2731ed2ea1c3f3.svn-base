@@ -1,0 +1,11 @@
+sourceVersion = 1.0
+authors = Benoît Garçon
+encoding = ISO-8859-1
+build = build/
+jarName = MyAnt
+classPath = fr.isima.myant
+bin = bin/
+defaultFile = mybuild.txt
+mainClass = MainAnt
+ext = ../MyExtAnt/
+test = ../MyAntTest/

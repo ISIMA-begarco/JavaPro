@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_4Y_boLK-EeWeU4WA5_TFBg" name="NewModel">
+  <packageImport xmi:id="_j2_k8LLDEeWeU4WA5_TFBg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ESSk4LK_EeWeU4WA5_TFBg" name="Project">
+    <packageImport xmi:id="_yKcj0LLAEeWeU4WA5_TFBg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <ownedAttribute xmi:id="_fVZJYLLAEeWeU4WA5_TFBg" name="name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_Y9a6sLLAEeWeU4WA5_TFBg" name="loadFromFile" visibility="public"/>
+    <ownedOperation xmi:id="_ckDDILLAEeWeU4WA5_TFBg" name="execute" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rRQpALLBEeWeU4WA5_TFBg" name="Task">
+    <ownedOperation xmi:id="_wKGx0LLCEeWeU4WA5_TFBg" name="execute" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ymvBwLLBEeWeU4WA5_TFBg" name="Target">
+    <packageImport xmi:id="_ymvBwbLBEeWeU4WA5_TFBg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <ownedAttribute xmi:id="_ymvBwrLBEeWeU4WA5_TFBg" name="name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_ymvBxLLBEeWeU4WA5_TFBg" name="execute" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Hn2rILLCEeWeU4WA5_TFBg" name=".." memberEnd="_Hn2rIbLCEeWeU4WA5_TFBg _HoKNIrLCEeWeU4WA5_TFBg" navigableOwnedEnd="_HoKNIrLCEeWeU4WA5_TFBg">
+    <ownedEnd xmi:id="_Hn2rIbLCEeWeU4WA5_TFBg" name="project" type="_ESSk4LK_EeWeU4WA5_TFBg" aggregation="composite" association="_Hn2rILLCEeWeU4WA5_TFBg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HoKNILLCEeWeU4WA5_TFBg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HoKNIbLCEeWeU4WA5_TFBg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_HoKNIrLCEeWeU4WA5_TFBg" name="targets" type="_ymvBwLLBEeWeU4WA5_TFBg" association="_Hn2rILLCEeWeU4WA5_TFBg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HoTXELLCEeWeU4WA5_TFBg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HoTXEbLCEeWeU4WA5_TFBg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Xwj0ELLCEeWeU4WA5_TFBg" name="&lt; depends on" memberEnd="_Xwj0EbLCEeWeU4WA5_TFBg _Xwj0FLLCEeWeU4WA5_TFBg" navigableOwnedEnd="_Xwj0FLLCEeWeU4WA5_TFBg">
+    <ownedEnd xmi:id="_Xwj0EbLCEeWeU4WA5_TFBg" name="" type="_ymvBwLLBEeWeU4WA5_TFBg" aggregation="shared" association="_Xwj0ELLCEeWeU4WA5_TFBg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Xwj0ErLCEeWeU4WA5_TFBg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Xwj0E7LCEeWeU4WA5_TFBg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_Xwj0FLLCEeWeU4WA5_TFBg" name="defaultTarget" type="_ymvBwLLBEeWeU4WA5_TFBg" association="_Xwj0ELLCEeWeU4WA5_TFBg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Xwj0FbLCEeWeU4WA5_TFBg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Xwj0FrLCEeWeU4WA5_TFBg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jWsJsLLCEeWeU4WA5_TFBg" name=" ." memberEnd="_jWsJsbLCEeWeU4WA5_TFBg _jWsJtLLCEeWeU4WA5_TFBg" navigableOwnedEnd="_jWsJtLLCEeWeU4WA5_TFBg">
+    <ownedEnd xmi:id="_jWsJsbLCEeWeU4WA5_TFBg" name="project" type="_ESSk4LK_EeWeU4WA5_TFBg" aggregation="composite" association="_jWsJsLLCEeWeU4WA5_TFBg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jWsJsrLCEeWeU4WA5_TFBg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jWsJs7LCEeWeU4WA5_TFBg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_jWsJtLLCEeWeU4WA5_TFBg" name="defaultTarget" type="_ymvBwLLBEeWeU4WA5_TFBg" association="_jWsJsLLCEeWeU4WA5_TFBg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jWsJtbLCEeWeU4WA5_TFBg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jWsJtrLCEeWeU4WA5_TFBg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-69XALLCEeWeU4WA5_TFBg" name="runs >" memberEnd="_-69XAbLCEeWeU4WA5_TFBg _-69XBLLCEeWeU4WA5_TFBg" navigableOwnedEnd="_-69XBLLCEeWeU4WA5_TFBg">
+    <ownedEnd xmi:id="_-69XAbLCEeWeU4WA5_TFBg" name="target" type="_ymvBwLLBEeWeU4WA5_TFBg" aggregation="shared" association="_-69XALLCEeWeU4WA5_TFBg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-69XArLCEeWeU4WA5_TFBg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-69XA7LCEeWeU4WA5_TFBg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_-69XBLLCEeWeU4WA5_TFBg" name="tasks" type="_rRQpALLBEeWeU4WA5_TFBg" association="_-69XALLCEeWeU4WA5_TFBg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-69XBbLCEeWeU4WA5_TFBg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-69XBrLCEeWeU4WA5_TFBg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_o-K6ILLDEeWeU4WA5_TFBg" name="MkdirTask">
+    <generalization xmi:id="_Fb5fALLEEeWeU4WA5_TFBg" general="_rRQpALLBEeWeU4WA5_TFBg"/>
+    <ownedAttribute xmi:id="_3N_O0LLDEeWeU4WA5_TFBg" name="dir" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_p5q5ELLDEeWeU4WA5_TFBg" name="EchoTask">
+    <generalization xmi:id="_GhsCYLLEEeWeU4WA5_TFBg" general="_rRQpALLBEeWeU4WA5_TFBg"/>
+    <ownedAttribute xmi:id="_vkFeMLLDEeWeU4WA5_TFBg" name="message" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qZMtsLLDEeWeU4WA5_TFBg" name="CopyTask">
+    <generalization xmi:id="_E2nnsLLEEeWeU4WA5_TFBg" general="_rRQpALLBEeWeU4WA5_TFBg"/>
+    <ownedAttribute xmi:id="_6NgT8LLDEeWeU4WA5_TFBg" name="from" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_-EoWgLLDEeWeU4WA5_TFBg" name="to" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+</uml:Model>

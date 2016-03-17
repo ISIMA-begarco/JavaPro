@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	
+<project name="MySuperApp" default="doAll" basedir=".">
+	
+	<description>	<!-- description du projet -->
+		Build avec la super task
+	</description>
+
+	<target name="init" description="Initialise la construction du projet">	<!-- initialisation de la construction -->
+		<echo message="Initialisation en cours ..."/>
+		<!-- chargement des propriétés -->
+		<property file="build.properties"/>
+		<!-- vérification des propriétés -->
+		<condition property="bin" else="bin">
+			<isset property="bin"/>
+		</condition>
+		<condition property="build" else="build">
+			<isset property="build"/>
+		</condition>
+		<condition property="jarName" else="defaultJarName">
+			<isset property="jarName"/>
+		</condition>
+		<condition property="authors" else="Me">
+			<isset property="authors"/>
+		</condition>
+		<condition property="sourceVersion" else="1.0">
+			<isset property="sourceVersion"/>
+		</condition>
+		<condition property="encoding" else="ISO-8859-1">
+			<isset property="encoding"/>
+		</condition>
+		<condition property="classPath" else="fr.isima.myant">
+			<isset property="classPath"/>
+		</condition>
+		<condition property="mainClass" else="MainAnt">
+			<isset property="mainClass"/>
+		</condition>
+	</target>
+	
+	<target name="clean" depends="init" description="Nettoie le projet">	<!-- nettoyage prealable -->
+		<echo message="Nettoyage en cours ..."/>
+		<delete dir="${build}"/>
+		<delete dir="${bin}"/>
+	</target>
+	
+	<target name="super"> <!-- prepare la SuperTask -->
+		<mkdir dir="bin"/>
+		<javac srcdir="${task.src}"
+		 includeantruntime="false"
+         destdir="${bin}"
+		 classpath="${lib}ant.jar"
+		 encoding="${encoding}"
+         debug="on">
+		</javac>
+	</target>
+	
+	<target name="doAll" depends="clean,super" description="Utilise la tâche perso.">
+		<taskdef name="super" classname="${task.path}.${task.name}" classpath="${bin}"/>
+		<super buildpath="${bin}" classpath="${classPath}" mainclass="${mainClass}" sourcepath="${src}" jarName="${jarName}" jarUri="${build}" />
+	</target>
+	
+</project>

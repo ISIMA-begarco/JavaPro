@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Immut" default="TARGET2" basedir=".">
+	<description>
+		Test des propriétés
+	</description>
+
+	<target name="TARGET1">
+		<echo message="Execution of TARGET1."/>
+		<property file="immut.properties"/>
+	</target>
+
+	<target name="TARGET2" depends="TARGET1">
+		<echo message="Execution of TARGET2 : property 'bla' : ${bla}"/>
+	</target>
+</project>

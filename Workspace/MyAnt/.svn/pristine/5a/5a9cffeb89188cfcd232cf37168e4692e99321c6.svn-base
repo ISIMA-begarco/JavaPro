@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="CirculatedDep" default="TARGET2" basedir=".">
+	<description>
+		Test de dépendances circulaires
+	</description>
+	
+	<!-- remplacer par la ligne ci-dessous la balise target suivante -->
+	<!-- <target name="TARGET1" depends="TARGET2"> -->
+	<target name="TARGET1">
+		<echo message="Execution of TARGET1."/>
+	</target>
+
+	<target name="TARGET2" depends="TARGET1">
+		<echo message="Execution of TARGET2."/>
+	</target>
+</project>

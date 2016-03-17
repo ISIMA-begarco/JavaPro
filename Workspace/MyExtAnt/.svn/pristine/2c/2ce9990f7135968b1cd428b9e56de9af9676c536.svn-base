@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	
+<project name="MyExtAntDevPro" default="package">
+	
+	<description>	<!-- description du projet -->
+		Build du projet MyExtAnt
+	</description>
+
+	<target name="init">	<!-- initialisation de la construction -->
+		<echo message="Initialisation de ${ant.project.name} en cours ..."/>
+		<!-- chargement des propriétés -->
+		<property file="build.properties"/>
+		<!-- vérification des propriétés -->
+		<condition property="bin" else="bin">
+			<isset property="bin"/>
+		</condition>
+		<condition property="build" else="build">
+			<isset property="build"/>
+		</condition>
+		<condition property="jarName" else="defaultJarName">
+			<isset property="jarName"/>
+		</condition>
+		<condition property="authors" else="Me">
+			<isset property="authors"/>
+		</condition>
+		<condition property="sourceVersion" else="1.0">
+			<isset property="sourceVersion"/>
+		</condition>
+		<condition property="encoding" else="ISO-8859-1">
+			<isset property="encoding"/>
+		</condition>
+		<condition property="classPath" else="fr.isima.myextant">
+			<isset property="classPath"/>
+		</condition>
+	</target>
+	
+	<target name="clean" depends="init">	<!-- nettoyage prealable -->
+		<echo message="Nettoyage en cours ..."/>
+		<delete dir="${build}"/>
+		<delete dir="${bin}"/>
+	</target>
+
+	<target name="compile" depends="init">	<!-- compilation du projet -->
+		<echo message="Compilation en cours ..."/>
+		<mkdir dir="${bin}"/>
+		<javac srcdir="."
+		 includeantruntime="false"
+         destdir="${bin}"
+         classpath="${classPath},${classPath.ext}"
+		 encoding="${encoding}"
+         debug="on"/>
+	</target>
+
+	<target name="package" depends="clean,compile">	<!-- packaging du projet et création du jar -->
+		<echo message="Packaging en cours ..."/>
+		<mkdir dir="${build}"/>
+		<jar 
+			destfile="${build}${jarName}.jar"
+			basedir="${bin}">
+			<manifest>
+				<attribute name="Main-Class" value="${classPath}.${mainClass}"/>
+				<attribute name="Author" value="${authors}"/>
+				<attribute name="Version" value="${sourceVersion}"/>
+			</manifest>
+		</jar>
+	</target>
+
+</project>

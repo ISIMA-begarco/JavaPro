@@ -1,0 +1,23 @@
+# The imports section lists the external tasks to use
+# The external tasks must be in the classpath, but NOT in the build path 
+use fr.isima.myant.MyNewTask1 as mynewtask1 
+use fr.isima.myant.MyNewTask2 as mynewtask2  
+use fr.isima.myextant.CompileTask as compiletask  
+
+# For the moment, the default target acts as the entry point of your project 
+# No other targets will be defined
+
+default:
+echo[message:"Starting..."]
+mynewtask1[att1:"value1", att2:"value2"]
+mynewtask2[att1:"blabla", att2:"blabla", att3:"blabla"]
+echo[message:"Completed!"]
+
+clean:
+echo[message:"Cleaning..."]
+
+compile:
+echo[message:"Compiling..."]
+
+package: clean, compile
+echo[message:"Creating JAR..."]

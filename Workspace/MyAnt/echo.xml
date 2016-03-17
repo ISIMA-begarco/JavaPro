@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+	<macrodef name="javac">
+		<sequential>
+			<echo message="Pas de compilation aujourd'hui."/>
+		</sequential>
+	</macrodef>
+</project>

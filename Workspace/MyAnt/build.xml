@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="MyAntDevPro" default="run" basedir=".">
+	
+	<description>	<!-- description du projet -->
+		Build du projet MyAnt
+	</description>
+
+	<target name="init" description="Initialise la construction du projet">	<!-- initialisation de la construction -->
+		<echo message="Initialisation de ${ant.project.name} en cours ..."/>
+		<!-- chargement des propriétés -->
+		<property file="build.properties"/>
+		<!-- vérification des propriétés -->
+		<condition property="bin" else="bin">
+			<isset property="bin"/>
+		</condition>
+		<condition property="build" else="build">
+			<isset property="build"/>
+		</condition>
+		<condition property="jarName" else="defaultJarName">
+			<isset property="jarName"/>
+		</condition>
+		<condition property="authors" else="Me">
+			<isset property="authors"/>
+		</condition>
+		<condition property="sourceVersion" else="1.0">
+			<isset property="sourceVersion"/>
+		</condition>
+		<condition property="encoding" else="ISO-8859-1">
+			<isset property="encoding"/>
+		</condition>
+		<condition property="classPath" else="fr.isima.myant">
+			<isset property="classPath"/>
+		</condition>
+		<condition property="mainClass" else="MainAnt">
+			<isset property="mainClass"/>
+		</condition>
+		<condition property="defaultFile" else="mybuild.txt">
+			<isset property="defaultFile"/>
+		</condition>
+	</target>
+	
+	<target name="external" depends="clean" description="Ajoute les projets extérieurs">	<!-- ajout de projets externes -->
+		<echo message="Recherche des projets extérieurs en cours ..."/>	
+		<ant dir="${ext}" antfile="build.xml" inheritall="false" target="package" />
+	</target>
+	
+	<target name="clean" depends="init" description="Nettoie le projet">	<!-- nettoyage prealable -->
+		<echo message="Nettoyage en cours ..."/>
+		<delete dir="${build}"/>
+		<delete dir="${bin}"/>
+	</target>
+
+	<target name="compile" depends="external" description="Compile le projet">	<!-- compilation du projet -->
+		<echo message="Compilation en cours ..."/>
+		<mkdir dir="${bin}"/>
+		<javac srcdir="."
+		 includeantruntime="false"
+         destdir="${bin}"
+         classpath="${classPath}"
+		 encoding="${encoding}"
+         debug="on">
+		</javac>
+	</target>
+	
+	<target name="test" description="Tests unitaires du projet">	<!-- Exécute les tests unitaires -->
+		<echo message="Exécution des tests unitaires en cours ..."/>	
+		<ant dir="${test}" antfile="build.xml" inheritall="false" target="runTests"  />
+	</target>
+
+	<target name="package" description="Crée le jar">	<!-- packaging du projet et création du jar -->
+		<echo message="Packaging en cours ..."/>
+		<mkdir dir="${build}"/>
+		<jar 
+			destfile="${build}${jarName}.jar"
+			basedir="${bin}">
+			<zipgroupfileset dir="${ext}${build}" includes="*.jar"/>
+			<manifest>
+				<attribute name="Main-Class" value="${classPath}.${mainClass}"/>
+				<attribute name="Author" value="${authors}"/>
+				<attribute name="Version" value="${sourceVersion}"/>
+			</manifest>
+		</jar>
+		<copy todir="${build}" file="${defaultFile}"/>
+	</target>
+
+	<target name="run" depends="compile,test,package" description="Exécute le projet">	<!-- exécution du projet -->
+		<echo message="Exécution en cours ..."/>
+		<java jar="${build}${jarName}.jar" fork="true">
+			<arg value="${defaultFile}"/>
+			<arg value="package"/>
+			<classpath>
+				<pathelement location="${ext}${bin}" />
+				<pathelement location="${ext}${build}*.jar" />
+			</classpath>
+		</java>
+	</target>
+
+</project>
