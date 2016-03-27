@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="39" key="UpdateDialogWithConflictHandling.location.y"/>
+	<item value="813" key="TreeConflictsView.col.Description"/>
+	<item value="252" key="HistoryTableProvider.revisionsBlock.Date"/>
+	<item value="O:/OneDrive/GitHub/JavaPro/Workspace/MyAntTest" key="TreeConflictsView.resource"/>
+	<item value="605" key="SwitchDialogWithConflictHandling.size.x"/>
+	<item value="778" key="SwitchDialogWithConflictHandling.size.y"/>
+	<item value="505" key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Comment"/>
+	<item value="0" key="CommitDialog.location.y"/>
+	<item value="175" key="CommitDialog.location.x"/>
+	<item value="494" key="RevertDialog.location.x"/>
+	<item value="file:///O:/OneDrive/GitHub/JavaPro/myant-repository/trunk/MyAnt" key="UrlCombo.MyAnt.1"/>
+	<item value="file:///O:/OneDrive/GitHub/JavaPro/myant-repository/tags/MyAnt-alpha" key="UrlCombo.MyAnt.0"/>
+	<item value="109" key="RevertDialog.location.y"/>
+	<item value="136" key="TreeConflictsView.col.Resource"/>
+	<item value="file:///O:/OneDrive/GitHub/JavaPro/myant-repository/tags/ComputingApp-alpha" key="UrlCombo.ComputingApp.0"/>
+	<item value="file:///O:/OneDrive/GitHub/JavaPro/myant-repository/branches/MyAnt-b01" key="UrlCombo.MyAnt.2"/>
+	<item value="252" key="HistoryTableProvider.revisions.Date"/>
+	<item value="503" key="HistoryTableProvider.revisionsBlock.Comment"/>
+	<item value="true" key="TreeConflictsView.container"/>
+	<item value="file:///O:/OneDrive/GitHub/JavaPro/myant-repository/tags/MyAntTest-alpha" key="UrlCombo.MyAntTest.0"/>
+	<item value="508" key="ChooseUrlDialog.location.x"/>
+	<item value="102" key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Revision"/>
+	<item value="147" key="ChooseUrlDialog.location.y"/>
+	<item value="101" key="HistoryTableProvider.revisions.Revision"/>
+	<item value="621" key="RevertDialog.size.y"/>
+	<item value="525" key="RevertDialog.size.x"/>
+	<item value="503" key="HistoryTableProvider.revisions.Comment"/>
+	<item value="101" key="HistoryTableProvider.revisionsBlock.Revision"/>
+	<item value="252" key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Date"/>
+	<item value="500" key="CommitDialog.weights.0"/>
+	<item value="500" key="CommitDialog.weights.1"/>
+	<item value="727" key="UpdateDialogWithConflictHandling.size.y"/>
+	<item value="202" key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Author"/>
+	<item value="895" key="CommitDialog.size.y"/>
+	<item value="525" key="UpdateDialogWithConflictHandling.size.x"/>
+	<item value="1163" key="CommitDialog.size.x"/>
+	<item value="494" key="UpdateDialogWithConflictHandling.location.x"/>
+	<item value="false" key="BranchTagDialog.makeParents"/>
+	<item value="497" key="ChooseUrlDialog.size.x"/>
+	<item value="468" key="BranchTag.location.x"/>
+	<item value="267" key="BranchTag.location.y"/>
+	<item value="201" key="HistoryTableProvider.revisions.Author"/>
+	<item value="201" key="HistoryTableProvider.revisionsBlock.Author"/>
+	<item value="371" key="ChooseUrlDialog.size.y"/>
+	<item value="file:///O:/OneDrive/GitHub/JavaPro/myant-repository/tags/MyExtAnt-alpha" key="UrlCombo.MyExtAnt.0"/>
+	<item value="385" key="BranchTag.size.y"/>
+	<item value="576" key="BranchTag.size.x"/>
+	<item value="5" key="SwitchDialogWithConflictHandling.location.y"/>
+	<item value="454" key="SwitchDialogWithConflictHandling.location.x"/>
+	<section name="CommitWizard">
+		<item value="500" key="VWeight2"/>
+		<item value="500" key="VWeight1"/>
+		<item value="false" key="ShowCompare"/>
+	</section>
 	<section name="NewLocationWizard">
 		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
 			<item value="file:///O:/OneDrive/GitHub/JavaPro/myant-repository"/>

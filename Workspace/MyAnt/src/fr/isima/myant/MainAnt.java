@@ -1,20 +1,17 @@
 package fr.isima.myant;
 
-import java.io.FileNotFoundException;
-
 public class MainAnt {
-
 	public static void main(String[] args) {
-		Project p;
+		Project p;	// creation du nouveau projet
 		try {
-			p = new Project("BestEver", args[0]);
-			for(int i = 1 ; i < args.length ; i++) {
-				p.addTargetToExecute(args[i]);
+			p = new Project("BestEver", args[0]);	// utilisation du premier argument comme fichier de configuration
+			for(int i = 1 ; i < args.length ; i++) { // parcours des cible à exécuter
+				p.addTargetToExecute(args[i]);	// ajout à l'execution
 			}
-			p.execute();
+			p.execute();	// execution de toutes les cibles
 
-		} catch (FileNotFoundException e) {
-			System.err.println(e.getMessage());
+		} catch (Exception e) {
+			System.err.println(e.getMessage());	// afficher un petit message d'erreur en cas d'errreur
 		}
 	}
 

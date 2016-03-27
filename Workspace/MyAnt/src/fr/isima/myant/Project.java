@@ -5,11 +5,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import fr.isima.myant.Target;
 
 /*******************************************************************************
  * 2016, All rights reserved.
@@ -58,10 +57,10 @@ public class Project {
 
 	/**
 	 * The constructor.
-	 * @throws FileNotFoundException
+	 * @throws IOException 
 	 */
 	@SuppressWarnings({ "rawtypes" })
-	public Project(String pName, String pFilename) throws FileNotFoundException {
+	public Project(String pName, String pFilename) throws IOException {
 		super();
 		toExecute = new ArrayList<String>();
 		targets = new HashMap<String, Target>();
@@ -71,7 +70,13 @@ public class Project {
 		classes.put("echo", EchoTask.class);
 		classes.put("copy", CopyTask.class);
 		classes.put("mkdir", MkdirTask.class);
-		loadFromFile();
+		try {
+			loadFromFile();
+		} catch (FileNotFoundException e) {
+			throw new FileNotFoundException(e.getMessage());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -83,10 +88,17 @@ public class Project {
 
 	/**
 	 * Description of the method loadFromFile.
-	 * @throws FileNotFoundException
+	 * @throws IOException 
+	 * @throws ClassNotFoundException 
+	 * @throws SecurityException 
+	 * @throws NoSuchMethodException 
+	 * @throws InvocationTargetException 
+	 * @throws IllegalArgumentException 
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
 	 */
 	@SuppressWarnings({ "unchecked", "resource" })
-	public void loadFromFile() throws FileNotFoundException {
+	public void loadFromFile() throws IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InstantiationException {
 		FileReader file = null;
 		BufferedReader br = null;
 		file = new FileReader(filename);
@@ -96,52 +108,28 @@ public class Project {
 		Target current = null;
 		String line = null;
 		// lecture de la premiere ligne
-		try {
-			line = br.readLine();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
+		line = br.readLine();
 
 		while(line != null) {
-			if(line.length() == 0 || line=="" || line.equals("\n")) {
-
-			} else if(line.charAt(0) == '#') {
-
-			} else if(line.startsWith("use ")) {
+			if(line.length() == 0 || line=="" || line.equals("\n") || line.charAt(0) == '#') {
+				// ignore empty lines
+				// ignore commentaries
+			} else if(line.startsWith("use ")) {	/* les classes à importer */
 				String words[] = line.split(" ");
-				try {
-					classes.put(words[3], Class.forName(words[1]));
-				} catch (ClassNotFoundException e) {
-					e.printStackTrace();
-				}
-			} else if(line.contains("[")) {
+				classes.put(words[3], Class.forName(words[1]));
+			} else if(line.contains("[")) {	/* les taches à exécuter */
 				String words[] = line.split("\\[|\\]|, ");
 				@SuppressWarnings("rawtypes")
 				Constructor c = null;
-				try {
-					c = classes.get(words[0]).getConstructor();
-				} catch (NoSuchMethodException e) {
-					e.printStackTrace();
-				} catch (SecurityException e) {
-					e.printStackTrace();
-				}
+				c = classes.get(words[0]).getConstructor();
 				Task t = null;
-				try {
-					t = (Task) c.newInstance();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+				t = (Task) c.newInstance();
 				for(int i = 1 ; i < words.length ; ++i) {
 					String param[] = words[i].split(":");
 					if (param[0] != "") {
-						try {
-							param[0] = Character.toUpperCase(param[0].charAt(0)) + param[0].substring(1, param[0].length());
-							Method m = classes.get(words[0]).getMethod("set"+param[0], String.class);
-							m.invoke(t,param[1].split("\"")[1]);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
+						param[0] = Character.toUpperCase(param[0].charAt(0)) + param[0].substring(1, param[0].length());
+						Method m = classes.get(words[0]).getMethod("set"+param[0], String.class);
+						m.invoke(t,param[1].split("\"")[1]);
 					}
 				}
 				current.getTasks().add(t);
@@ -160,11 +148,7 @@ public class Project {
 			}
 
 			// ligne suivante
-			try {
-				line = br.readLine();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			line = br.readLine();
 		}
 	}
 

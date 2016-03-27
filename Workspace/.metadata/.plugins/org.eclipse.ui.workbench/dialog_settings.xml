@@ -19,4 +19,10 @@
 		<item value="159" key="DIALOG_X_ORIGIN"/>
 		<item value="-104" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="ImportExportAction">
+		<item value="org.tigris.subversion.subclipse.ui.wizards.import.CheckoutWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.tigris.subversion.subclipse.ui.svn"/>
+		</list>
+	</section>
 </section>

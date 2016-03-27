@@ -48,16 +48,20 @@
 	</target>
 
 	<target name="compile" depends="init">
+		<echo message="basedir ${basedir}"/>
 		<echo message="Compilation des tests en cours ..."/>
 		<mkdir dir="${bin}"/>
 		<javac srcdir="${src}"
          destdir="${bin}"
-         classpath="${classPath}"
          debug="on"
 		 includeantruntime="true">
 		<classpath>
+			<pathelement location="${ext}${bin}" />
+			<pathelement location="${ext.2}${bin}" />
 			<pathelement location="${bin}" />
-        	<path location="${lib}**/*.jar" />
+        	<pathelement location="${lib}**/*.jar" />
+        	<pathelement location="${lib.test}junit.jar" />
+        	<pathelement location="${lib.test}hamcrest.jar" />
       	</classpath>
 		</javac>
 	</target>
@@ -69,7 +73,7 @@
 	
 	<target name="runTests" depends="compile" >
 		<echo message="Tests en cours ..."/>
-		<junit haltonfailure="true" printsummary="yes" fork="true" dir=".">
+		<junit haltonfailure="true" printsummary="yes" fork="true">
 			<sysproperty key="net.sourceforge.cobertura.datafile"
 			        file="${basedir}/cobertura.ser" />
 			<classpath location="${lib.test}junit.jar" />
@@ -83,9 +87,9 @@
 			<test name="${classPath}.${testsuite}" outfile="${resultfile}" />
 		</junit>
 				
-		<cobertura-report destdir="${reportcobertura}" datafile="cobertura.ser" srcdir="${ext}${src}">
+		<cobertura-report format="html" destdir="${reportcobertura}" datafile="cobertura.ser" srcdir="${ext}${src}">
 			<fileset dir="${ext.2}${src}">
-				<include name="**/*.java" />				
+				<include name="**/*.java" />			
 			</fileset>
 		</cobertura-report>
 	</target>

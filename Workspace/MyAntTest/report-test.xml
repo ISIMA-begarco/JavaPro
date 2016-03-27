@@ -1,181 +1,125 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Orion" name="fr.isima.myanttest.AllTests" skipped="0" tests="29" time="0.281" timestamp="2016-03-17T12:58:28">
+<testsuite errors="0" failures="0" hostname="Orion" name="fr.isima.myanttest.AllTests" skipped="0" tests="30" time="0.27" timestamp="2016-03-17T19:22:34">
   <properties>
-    <property name="file.encoding.pkg" value="sun.io" />
-    <property name="org.osgi.framework.executionenvironment" value="OSGi/Minimum-1.0,OSGi/Minimum-1.1,OSGi/Minimum-1.2,JavaSE/compact1-1.8,JavaSE/compact2-1.8,JavaSE/compact3-1.8,JRE-1.1,J2SE-1.2,J2SE-1.3,J2SE-1.4,J2SE-1.5,JavaSE-1.6,JavaSE-1.7,JavaSE-1.8" />
-    <property name="osgi.framework" value="file:/p:/Programs/eclipse/plugins/org.eclipse.osgi_3.10.102.v20160118-1700.jar" />
-    <property name="java.home" value="C:\Program Files\Java\jre1.8.0_73" />
-    <property name="eclipse.application" value="org.eclipse.ui.ide.workbench" />
-    <property name="ant.file.MyAntTestDevPro" value="O:\OneDrive\Workspace\MyAntTest\build.xml" />
-    <property name="org.eclipse.debug.ui.breakpoints.toggleFactoriesUsed" value="false" />
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_73\lib\endorsed" />
-    <property name="classPath" value="fr.isima.myanttest" />
-    <property name="sun.os.patch.level" value="" />
-    <property name="java.vendor.url" value="http://java.oracle.com/" />
-    <property name="java.version" value="1.8.0_73" />
-    <property name="eclipse.pdebuild.home" value="/P:/Programs/eclipse/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/./" />
-    <property name="osgi.requiredJavaVersion" value="1.7" />
-    <property name="osgi.os" value="win32" />
-    <property name="osgi.compatibility.bootdelegation" value="true" />
-    <property name="org.eclipse.equinox.simpleconfigurator.configUrl" value="file:org.eclipse.equinox.simpleconfigurator/bundles.info" />
-    <property name="org.osgi.framework.uuid" value="201ad0b4-3fec-0015-1e45-fe9d09a85b9a" />
-    <property name="osgi.splashPath" value="platform:/base/plugins/org.eclipse.platform" />
-    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
-    <property name="sourceVersion" value="1.0" />
-    <property name="ant.project.invoked-targets" value="runTests" />
-    <property name="user.name" value="Benoît" />
-    <property name="org.osgi.framework.version" value="1.8.0" />
-    <property name="encoding" value="ISO-8859-1" />
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
-    <property name="org.osgi.framework.system.packages" value="javax.accessibility,javax.activation,javax.activity,javax.annotation,javax.annotation.processing,javax.crypto,javax.crypto.interfaces,javax.crypto.spec,javax.imageio,javax.imageio.event,javax.imageio.metadata,javax.imageio.plugins.bmp,javax.imageio.plugins.jpeg,javax.imageio.spi,javax.imageio.stream,javax.jws,javax.jws.soap,javax.lang.model,javax.lang.model.element,javax.lang.model.type,javax.lang.model.util,javax.management,javax.management.loading,javax.management.modelmbean,javax.management.monitor,javax.management.openmbean,javax.management.relation,javax.management.remote,javax.management.remote.rmi,javax.management.timer,javax.naming,javax.naming.directory,javax.naming.event,javax.naming.ldap,javax.naming.spi,javax.net,javax.net.ssl,javax.print,javax.print.attribute,javax.print.attribute.standard,javax.print.event,javax.rmi,javax.rmi.CORBA,javax.rmi.ssl,javax.script,javax.security.auth,javax.security.auth.callback,javax.security.auth.kerberos,javax.security.auth.login,javax.security.auth.spi,javax.security.auth.x500,javax.security.cert,javax.security.sasl,javax.sound.midi,javax.sound.midi.spi,javax.sound.sampled,javax.sound.sampled.spi,javax.sql,javax.sql.rowset,javax.sql.rowset.serial,javax.sql.rowset.spi,javax.swing,javax.swing.border,javax.swing.colorchooser,javax.swing.event,javax.swing.filechooser,javax.swing.plaf,javax.swing.plaf.basic,javax.swing.plaf.metal,javax.swing.plaf.multi,javax.swing.plaf.nimbus,javax.swing.plaf.synth,javax.swing.table,javax.swing.text,javax.swing.text.html,javax.swing.text.html.parser,javax.swing.text.rtf,javax.swing.tree,javax.swing.undo,javax.tools,javax.transaction,javax.transaction.xa,javax.xml,javax.xml.bind,javax.xml.bind.annotation,javax.xml.bind.annotation.adapters,javax.xml.bind.attachment,javax.xml.bind.helpers,javax.xml.bind.util,javax.xml.crypto,javax.xml.crypto.dom,javax.xml.crypto.dsig,javax.xml.crypto.dsig.dom,javax.xml.crypto.dsig.keyinfo,javax.xml.crypto.dsig.spec,javax.xml.datatype,javax.xml.namespace,javax.xml.parsers,javax.xml.soap,javax.xml.stream,javax.xml.stream.events,javax.xml.stream.util,javax.xml.transform,javax.xml.transform.dom,javax.xml.transform.sax,javax.xml.transform.stax,javax.xml.transform.stream,javax.xml.validation,javax.xml.ws,javax.xml.ws.handler,javax.xml.ws.handler.soap,javax.xml.ws.http,javax.xml.ws.soap,javax.xml.ws.spi,javax.xml.ws.spi.http,javax.xml.ws.wsaddressing,javax.xml.xpath,org.ietf.jgss,org.omg.CORBA,org.omg.CORBA_2_3,org.omg.CORBA_2_3.portable,org.omg.CORBA.DynAnyPackage,org.omg.CORBA.ORBPackage,org.omg.CORBA.portable,org.omg.CORBA.TypeCodePackage,org.omg.CosNaming,org.omg.CosNaming.NamingContextExtPackage,org.omg.CosNaming.NamingContextPackage,org.omg.Dynamic,org.omg.DynamicAny,org.omg.DynamicAny.DynAnyFactoryPackage,org.omg.DynamicAny.DynAnyPackage,org.omg.IOP,org.omg.IOP.CodecFactoryPackage,org.omg.IOP.CodecPackage,org.omg.Messaging,org.omg.PortableInterceptor,org.omg.PortableInterceptor.ORBInitInfoPackage,org.omg.PortableServer,org.omg.PortableServer.CurrentPackage,org.omg.PortableServer.POAManagerPackage,org.omg.PortableServer.POAPackage,org.omg.PortableServer.portable,org.omg.PortableServer.ServantLocatorPackage,org.omg.SendingContext,org.omg.stub.java.rmi,org.w3c.dom,org.w3c.dom.bootstrap,org.w3c.dom.css,org.w3c.dom.events,org.w3c.dom.html,org.w3c.dom.ls,org.w3c.dom.ranges,org.w3c.dom.stylesheets,org.w3c.dom.traversal,org.w3c.dom.views,org.w3c.dom.xpath,org.xml.sax,org.xml.sax.ext,org.xml.sax.helpers" />
-    <property name="sun.jnu.encoding" value="Cp1252" />
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="applicationXMI" value="org.eclipse.ui.workbench/LegacyIDE.e4xmi" />
-    <property name="osgi.instance.area.default" value="file:/C:/Users/Benoît/workspace/" />
-    <property name="eclipse.launcher.name" value="Eclipse" />
-    <property name="eclipse.product" value="org.eclipse.epp.package.dsl.product" />
-    <property name="java.specification.name" value="Java Platform API Specification" />
-    <property name="org.osgi.supports.framework.fragment" value="true" />
-    <property name="osgi.framework.useSystemProperties" value="true" />
-    <property name="user.timezone" value="" />
-    <property name="org.osgi.framework.system.capabilities" value="osgi.ee; osgi.ee=&quot;OSGi/Minimum&quot;; version:List&lt;Version&gt;=&quot;1.0, 1.1, 1.2&quot;,osgi.ee; osgi.ee=&quot;JRE&quot;; version:List&lt;Version&gt;=&quot;1.0, 1.1&quot;,osgi.ee; osgi.ee=&quot;JavaSE&quot;; version:List&lt;Version&gt;=&quot;1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8&quot;,osgi.ee; osgi.ee=&quot;JavaSE/compact1&quot;; version:List&lt;Version&gt;=&quot;1.8&quot;,osgi.ee; osgi.ee=&quot;JavaSE/compact2&quot;; version:List&lt;Version&gt;=&quot;1.8&quot;,osgi.ee; osgi.ee=&quot;JavaSE/compact3&quot;; version:List&lt;Version&gt;=&quot;1.8&quot;" />
-    <property name="osgi.nl" value="fr_FR" />
-    <property name="user.script" value="" />
-    <property name="path.separator" value=";" />
-    <property name="file.encoding" value="Cp1252" />
-    <property name="osgi.arch" value="x86_64" />
-    <property name="ant.project.default-target" value="runTests" />
-    <property name="lib" value="lib/" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner fr.isima.myanttest.AllTests skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,O:\OneDrive\Workspace\MyAntTest\report-test.xml crashfile=O:\OneDrive\Workspace\MyAntTest\junitvmwatcher1783292260652944635.properties propsfile=O:\OneDrive\Workspace\MyAntTest\junit1560875647151380964.properties" />
-    <property name="testsuite" value="AllTests" />
-    <property name="ant.file" value="O:\OneDrive\Workspace\MyAntTest\build.xml" />
-    <property name="org.osgi.supports.framework.requirebundle" value="true" />
-    <property name="osgi.bundles.defaultStartLevel" value="4" />
-    <property name="osgi.bundles" value="reference:file:org.eclipse.osgi.compatibility.state_1.0.100.v20150402-1551.jar,reference:file:org.eclipse.equinox.simpleconfigurator_1.1.100.v20150423-1455.jar@1:start" />
-    <property name="java.io.tmpdir" value="S:\Users\Ben\AppData\Local\Temp\" />
-    <property name="org.osgi.framework.os.name" value="Windows10" />
-    <property name="equinox.use.ds" value="true" />
-    <property name="bin" value="bin/" />
-    <property name="user.language" value="fr" />
-    <property name="line.separator" value="&#xd;&#xa;" />
-    <property name="org.osgi.framework.processor" value="x86-64" />
-    <property name="java.vm.info" value="mixed mode" />
-    <property name="osgi.splashLocation" value="P:\Programs\Eclipse\\plugins\org.eclipse.platform_4.5.2.v20160203-1000\splash.bmp" />
-    <property name="sun.desktop" value="windows" />
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
-    <property name="cobertura" value="cobertura-2.1.1" />
-    <property name="eclipse.vm" value="C:\Program Files\Java\jre1.8.0_73\bin\server\jvm.dll" />
-    <property name="eclipse.pdebuild.templates" value="/P:/Programs/eclipse/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/templates/" />
-    <property name="osgi.configuration.area" value="file:/P:/Programs/eclipse/configuration/" />
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
-    <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
-    <property name="osgi.ws" value="win32" />
-    <property name="org.osgi.supports.framework.extension" value="true" />
-    <property name="eclipse.p2.data.area" value="@config.dir/../p2/" />
-    <property name="osgi.framework.extensions" value="reference:file:org.eclipse.osgi.compatibility.state_1.0.100.v20150402-1551.jar" />
-    <property name="lib.test" value="lib/test/" />
-    <property name="gosh.args" value="--nointeractive" />
-    <property name="org.osgi.framework.language" value="fr" />
-    <property name="os.name" value="Windows 10" />
-    <property name="eclipse.home.location" value="file:/P:/Programs/eclipse/" />
-    <property name="java.specification.vendor" value="Oracle Corporation" />
-    <property name="eclipse.vmargs" value="-Dosgi.requiredJavaVersion=1.7&#xa;-Xms256m&#xa;-Xmx1024m&#xa;-Djava.class.path=P:\Programs\Eclipse\\plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar&#xa;" />
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
-    <property name="eclipse.buildId" value="4.5.2.M20160203-1000" />
-    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_73\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_73/bin/server;C:/Program Files/Java/jre1.8.0_73/bin;C:/Program Files/Java/jre1.8.0_73/lib/amd64;P:\Programs\Python27\;P:\Programs\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32\compiler;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Sony\VAIO Improvement\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;C:\Program Files (x86)\Java\jre1.8.0_25\bin;P:\Programs\Python27\Scripts;P:\Programs\Python27;C:\Program Files\Common Files\Autodesk Shared\;P:\Program Files\Programs;P:\Program Files\Games;P:\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;P:\Programs\doxygen\bin;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;P:\Programs\apache-ant-1.9.6\bin;P:\Programs\Eclipse\eclipse.exe;P:\Programs\TortoiseSVN\bin;C:\Program Files (x86)\scala\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Git\bin;C:\Users\Benoît\AppData\Local\Programs\Eclipse Che\eclipse-che-4.0.0-RC12\tools\jre\bin;C:\Users\Benoît\AppData\Local\atom\bin;C:\Program Files\Docker Toolbox;P:\Programs\Eclipse;;." />
-    <property name="eclipse.pdebuild.scripts" value="/P:/Programs/eclipse/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/scripts/" />
-    <property name="ant.java.version" value="1.8" />
-    <property name="ext" value="../MyAnt/" />
-    <property name="eclipse.commands" value="-os&#xa;win32&#xa;-ws&#xa;win32&#xa;-arch&#xa;x86_64&#xa;-showsplash&#xa;P:\Programs\Eclipse\\plugins\org.eclipse.platform_4.5.2.v20160203-1000\splash.bmp&#xa;-launcher&#xa;P:\Programs\Eclipse\eclipse.exe&#xa;-name&#xa;Eclipse&#xa;--launcher.library&#xa;P:\Programs\Eclipse\\plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.1.300.v20150602-1417\eclipse_1611.dll&#xa;-startup&#xa;P:\Programs\Eclipse\\plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar&#xa;--launcher.appendVmargs&#xa;-product&#xa;org.eclipse.epp.package.dsl.product&#xa;-vm&#xa;C:\Program Files\Java\jre1.8.0_73\bin\server\jvm.dll&#xa;" />
-    <property name="basedir" value="O:\OneDrive\Workspace\MyAntTest" />
-    <property name="java.class.version" value="52.0" />
-    <property name="osgi.syspath" value="p:\Programs\eclipse\plugins" />
-    <property name="ant.home" value="P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327" />
-    <property name="org.eclipse.equinox.launcher.splash.location" value="P:\Programs\Eclipse\\plugins\org.eclipse.platform_4.5.2.v20160203-1000\splash.bmp" />
-    <property name="ant.file.MyAntDevPro" value="O:\OneDrive\Workspace\MyAnt\build.xml" />
-    <property name="ext.2" value="../MyExtAnt/" />
-    <property name="osgi.instance.area" value="file:/O:/OneDrive/Workspace/" />
-    <property name="net.sourceforge.cobertura.datafile" value="O:\OneDrive\Workspace\MyAntTest\cobertura.ser" />
-    <property name="osgi.install.area" value="file:/P:/Programs/eclipse/" />
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_73\bin" />
-    <property name="reportcobertura" value="report-cobertura" />
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
-    <property name="user.variant" value="" />
-    <property name="eclipse.stateSaveDelayInterval" value="30000" />
-    <property name="ant.project.name" value="MyAntTestDevPro" />
-    <property name="java.vm.specification.version" value="1.8" />
-    <property name="ant.file.type.MyAntDevPro" value="file" />
-    <property name="eclipse.running" value="true" />
-    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
-    <property name="sun.cpu.isalist" value="amd64" />
-    <property name="org.eclipse.update.reconcile" value="false" />
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_73\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
-    <property name="os.version" value="10.0" />
-    <property name="eclipse.launcher" value="P:\Programs\Eclipse\eclipse.exe" />
-    <property name="user.home" value="C:\Users\Benoît" />
-    <property name="java.vm.vendor" value="Oracle Corporation" />
-    <property name="authors" value="Benoît Garçon" />
-    <property name="user.dir" value="O:\OneDrive\Workspace\MyAntTest" />
-    <property name="org.osgi.framework.os.version" value="10.0.0" />
-    <property name="osgi.framework.shape" value="jar" />
-    <property name="eclipse.home" value="P:\Programs\eclipse" />
-    <property name="sun.cpu.endian" value="little" />
-    <property name="eclipse.startTime" value="1458219405972" />
-    <property name="java.vm.version" value="25.73-b02" />
-    <property name="java.class.path" value="O:\OneDrive\Workspace\MyAntTest\lib\test\junit.jar;O:\OneDrive\Workspace\MyAntTest\lib\test\hamcrest.jar;O:\OneDrive\Workspace\MyAntTest\instrumented-bin;O:\OneDrive\Workspace\MyAntTest\bin;O:\OneDrive\Workspace\MyAnt\bin;O:\OneDrive\Workspace\MyExtAnt\bin;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\cobertura-2.1.1.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\asm-5.0.1.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\asm-analysis-5.0.1.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\asm-commons-5.0.1.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\asm-tree-5.0.1.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\asm-util-5.0.1.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\commons-lang3-3.3.2.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\hamcrest-core-1.3.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\jaxen-1.1.4.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\jetty-6.1.14.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\jetty-util-6.1.14.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\junit-4.11.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\logback-classic-1.0.13.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\logback-core-1.0.13.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\oro-2.0.8.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\servlet-api-2.5-6.1.14.jar;O:\OneDrive\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\slf4j-api-1.7.5.jar;P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-launcher.jar;P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant.jar;P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit.jar;P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit4.jar" />
-    <property name="ant.library.dir" value="P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib" />
-    <property name="os.arch" value="amd64" />
-    <property name="eclipse.p2.profile" value="epp.package.dsl" />
-    <property name="jarName" value="MyAntTest" />
-    <property name="sun.java.launcher" value="SUN_STANDARD" />
-    <property name="org.osgi.framework.vendor" value="Eclipse" />
-    <property name="ant.core.lib" value="P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant.jar" />
-    <property name="osgi.tracefile" value="O:\OneDrive\Workspace\.metadata\trace.log" />
-    <property name="instrumentedbin" value="instrumented-bin" />
-    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
-    <property name="file.separator" value="\" />
-    <property name="java.runtime.version" value="1.8.0_73-b02" />
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_73\lib\resources.jar;C:\Program Files\Java\jre1.8.0_73\lib\rt.jar;C:\Program Files\Java\jre1.8.0_73\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_73\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_73\lib\jce.jar;C:\Program Files\Java\jre1.8.0_73\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_73\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_73\classes" />
-    <property name="osgi.frameworkClassPath" value="., file:p:/Programs/eclipse/plugins/org.eclipse.osgi.compatibility.state_1.0.100.v20150402-1551.jar" />
-    <property name="user.country" value="FR" />
-    <property name="osgi.logfile" value="O:\OneDrive\Workspace\.metadata\.log" />
-    <property name="resultfile" value="report-test" />
-    <property name="src" value="src/" />
     <property name="java.vendor" value="Oracle Corporation" />
-    <property name="java.specification.version" value="1.8" />
-    <property name="ant.file.type.MyAntTestDevPro" value="file" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="eclipse.pdebuild.templates" value="/P:/Programs/eclipse/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/templates/" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="lib" value="lib/" />
+    <property name="os.name" value="Windows 10" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_73\lib\resources.jar;C:\Program Files\Java\jre1.8.0_73\lib\rt.jar;C:\Program Files\Java\jre1.8.0_73\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_73\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_73\lib\jce.jar;C:\Program Files\Java\jre1.8.0_73\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_73\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_73\classes" />
+    <property name="ant.file.MyAntDevPro" value="O:\OneDrive\GitHub\JavaPro\Workspace\MyAnt\build.xml" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="net.sourceforge.cobertura.datafile" value="O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\cobertura.ser" />
+    <property name="ant.home" value="P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327" />
+    <property name="java.runtime.version" value="1.8.0_73-b02" />
+    <property name="sourceVersion" value="1.0" />
+    <property name="user.name" value="BenoŒt" />
+    <property name="authors" value="Benoît Garçon" />
+    <property name="user.language" value="fr" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_73\bin" />
+    <property name="ant.project.default-target" value="runTests" />
+    <property name="ant.project.name" value="MyAntTestDevPro" />
+    <property name="java.version" value="1.8.0_73" />
+    <property name="user.timezone" value="" />
+    <property name="bin" value="bin/" />
     <property name="sun.arch.data.model" value="64" />
+    <property name="ant.file.type.MyAntDevPro" value="file" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_73\lib\endorsed" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="cobertura" value="cobertura-2.1.1" />
+    <property name="java.class.version" value="52.0" />
+    <property name="src" value="src/" />
+    <property name="user.country" value="FR" />
+    <property name="java.home" value="C:\Program Files\Java\jre1.8.0_73" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\build.xml" />
+    <property name="os.version" value="10.0" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="25.73-b02" />
+    <property name="jarName" value="MyAntTest" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib" />
+    <property name="classPath" value="fr.isima.myanttest" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="user.script" value="" />
+    <property name="eclipse.pdebuild.scripts" value="/P:/Programs/eclipse/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/scripts/" />
+    <property name="user.home" value="C:\Users\Benoît" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_73\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_73/bin/server;C:/Program Files/Java/jre1.8.0_73/bin;C:/Program Files/Java/jre1.8.0_73/lib/amd64;C:\Program Files (x86)\CollabNet\Subversion Server;P:\Programs\Python27\;P:\Programs\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32\compiler;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Sony\VAIO Improvement\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;C:\Program Files (x86)\Java\jre1.8.0_25\bin;P:\Programs\Python27\Scripts;P:\Programs\Python27;C:\Program Files\Common Files\Autodesk Shared\;P:\Program Files\Programs;P:\Program Files\Games;P:\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;P:\Programs\doxygen\bin;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;P:\Programs\apache-ant-1.9.6\bin;P:\Programs\Eclipse\eclipse.exe;P:\Programs\TortoiseSVN\bin;C:\Program Files (x86)\scala\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Git\bin;C:\Users\BenoŒt\AppData\Local\Programs\Eclipse Che\eclipse-che-4.0.0-RC12\tools\jre\bin;C:\Users\BenoŒt\AppData\Local\atom\bin;C:\Program Files\Docker Toolbox;P:\Programs\Eclipse;;." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner fr.isima.myanttest.AllTests skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\report-test.xml crashfile=O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\junitvmwatcher7411513160931114847.properties propsfile=O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\junit7458098251691833470.properties" />
+    <property name="java.class.path" value="O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\test\junit.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\test\hamcrest.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\instrumented-bin;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\bin;O:\OneDrive\GitHub\JavaPro\Workspace\MyAnt\bin;O:\OneDrive\GitHub\JavaPro\Workspace\MyExtAnt\bin;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\cobertura-2.1.1.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\asm-5.0.1.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\asm-analysis-5.0.1.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\asm-commons-5.0.1.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\asm-tree-5.0.1.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\asm-util-5.0.1.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\commons-lang3-3.3.2.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\hamcrest-core-1.3.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\jaxen-1.1.4.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\jetty-6.1.14.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\jetty-util-6.1.14.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\junit-4.11.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\logback-classic-1.0.13.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\logback-core-1.0.13.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\oro-2.0.8.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\servlet-api-2.5-6.1.14.jar;O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\lib\cobertura-2.1.1\lib\slf4j-api-1.7.5.jar;P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-launcher.jar;P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant.jar;P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit.jar;P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="ant.file.MyAntTestDevPro" value="O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest\build.xml" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="ext.2" value="../MyExtAnt/" />
+    <property name="ext" value="../MyAnt/" />
+    <property name="eclipse.pdebuild.home" value="/P:/Programs/eclipse/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/./" />
+    <property name="resultfile" value="report-test" />
+    <property name="java.io.tmpdir" value="S:\Users\Ben\AppData\Local\Temp\" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="os.arch" value="amd64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="testsuite" value="AllTests" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_73\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+    <property name="user.dir" value="O:\OneDrive\GitHub\JavaPro\Workspace\MyAnt" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="lib.test" value="lib/test/" />
+    <property name="basedir" value="O:\OneDrive\GitHub\JavaPro\Workspace\MyAntTest" />
+    <property name="reportcobertura" value="report-cobertura" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="instrumentedbin" value="instrumented-bin" />
+    <property name="ant.core.lib" value="P:\Programs\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant.jar" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="ant.file.type.MyAntTestDevPro" value="file" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="ant.project.invoked-targets" value="runTests" />
+    <property name="encoding" value="ISO-8859-1" />
   </properties>
-  <testcase classname="fr.isima.myanttest.ProjectTest" name="testName" time="0.183" />
-  <testcase classname="fr.isima.myanttest.ProjectTest" name="testDefault" time="0.002" />
-  <testcase classname="fr.isima.myanttest.ProjectTest" name="testInexistantFile" time="0.0" />
-  <testcase classname="fr.isima.myanttest.ProjectTest" name="testTargetsLoading" time="0.005" />
+  <testcase classname="fr.isima.myanttest.ProjectTest" name="testName" time="0.171" />
+  <testcase classname="fr.isima.myanttest.ProjectTest" name="testLoading" time="0.001" />
+  <testcase classname="fr.isima.myanttest.ProjectTest" name="testDefault" time="0.001" />
+  <testcase classname="fr.isima.myanttest.ProjectTest" name="testInexistantFile" time="0.001" />
+  <testcase classname="fr.isima.myanttest.ProjectTest" name="testTargetsLoading" time="0.008" />
   <testcase classname="fr.isima.myanttest.EchoTaskTest" name="testEmpty" time="0.0" />
   <testcase classname="fr.isima.myanttest.EchoTaskTest" name="testMessage" time="0.0" />
   <testcase classname="fr.isima.myanttest.CopyTaskTest" name="testEmpty" time="0.001" />
   <testcase classname="fr.isima.myanttest.CopyTaskTest" name="testFrom" time="0.0" />
   <testcase classname="fr.isima.myanttest.CopyTaskTest" name="testTo" time="0.0" />
   <testcase classname="fr.isima.myanttest.MkdirTaskTest" name="testDir" time="0.001" />
-  <testcase classname="fr.isima.myanttest.MkdirTaskTest" name="testEmpty" time="0.001" />
-  <testcase classname="fr.isima.myanttest.CompileTaskTest" name="testExecute" time="0.001" />
+  <testcase classname="fr.isima.myanttest.MkdirTaskTest" name="testEmpty" time="0.0" />
+  <testcase classname="fr.isima.myanttest.CompileTaskTest" name="testExecute" time="0.0" />
   <testcase classname="fr.isima.myanttest.CompileTaskTest" name="testEmpty" time="0.0" />
   <testcase classname="fr.isima.myanttest.CompileTaskTest" name="testAtt1" time="0.0" />
   <testcase classname="fr.isima.myanttest.CompileTaskTest" name="testAtt2" time="0.0" />
   <testcase classname="fr.isima.myanttest.DeleteTaskTest" name="testExecute" time="0.001" />
-  <testcase classname="fr.isima.myanttest.DeleteTaskTest" name="testAtt" time="0.001" />
+  <testcase classname="fr.isima.myanttest.DeleteTaskTest" name="testAtt" time="0.0" />
   <testcase classname="fr.isima.myanttest.DeleteTaskTest" name="testEmpty" time="0.0" />
   <testcase classname="fr.isima.myanttest.MyNewTask1Test" name="testExecute" time="0.0" />
   <testcase classname="fr.isima.myanttest.MyNewTask1Test" name="testEmpty" time="0.0" />
   <testcase classname="fr.isima.myanttest.MyNewTask1Test" name="testAtt1" time="0.0" />
-  <testcase classname="fr.isima.myanttest.MyNewTask1Test" name="testAtt2" time="0.001" />
-  <testcase classname="fr.isima.myanttest.MyNewTask2Test" name="testExecute" time="0.001" />
-  <testcase classname="fr.isima.myanttest.MyNewTask2Test" name="testEmpty" time="0.001" />
+  <testcase classname="fr.isima.myanttest.MyNewTask1Test" name="testAtt2" time="0.0" />
+  <testcase classname="fr.isima.myanttest.MyNewTask2Test" name="testExecute" time="0.0" />
+  <testcase classname="fr.isima.myanttest.MyNewTask2Test" name="testEmpty" time="0.0" />
   <testcase classname="fr.isima.myanttest.MyNewTask2Test" name="testAtt1" time="0.0" />
   <testcase classname="fr.isima.myanttest.MyNewTask2Test" name="testAtt2" time="0.0" />
   <testcase classname="fr.isima.myanttest.MyNewTask2Test" name="testAtt3" time="0.0" />
   <testcase classname="fr.isima.myanttest.MainAntTest" name="testFile" time="0.001" />
-  <testcase classname="fr.isima.myanttest.MainAntTest" name="testMain" time="0.003" />
+  <testcase classname="fr.isima.myanttest.MainAntTest" name="testMain" time="0.002" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

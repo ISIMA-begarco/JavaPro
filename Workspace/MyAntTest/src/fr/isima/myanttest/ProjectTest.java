@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.HashMap;
 
@@ -37,7 +38,7 @@ public class ProjectTest {
 	}
 
 	@Test
-	public void testTargetsLoading() throws FileNotFoundException {
+	public void testTargetsLoading() throws IOException {
 		Project p = null;
 		p = new Project("bleu", "mybuild.txt");
 		assertEquals(p.getTargets().size(), 4);
@@ -50,14 +51,22 @@ public class ProjectTest {
 		p.addTargetToExecute("package");
 		p.execute();
 	}
+	
+	@Test
+	public void testLoading() throws IOException  {
+		Project p = new Project("Test", "mybuild.txt");
+		p.addTargetToExecute("default");
+		p.execute();
+		assertEquals("default", "default");
+	}
 
 	@Test(expected=FileNotFoundException.class)
-	public void testInexistantFile() throws FileNotFoundException {
+	public void testInexistantFile() throws IOException {
 		new Project("bleu", "inexistant.txt");
 	}
 	
 	@Test
-	public void testName() throws FileNotFoundException {
+	public void testName() throws IOException {
 		Project p = new Project("bleu", "mybuild.txt");
 		assertEquals("bleu", p.getName());
 		p.setName("rouge");
@@ -65,7 +74,7 @@ public class ProjectTest {
 	}
 	
 	@Test
-	public void testDefault() throws FileNotFoundException {
+	public void testDefault() throws IOException {
 		Project p = new Project("bleu", "mybuild.txt");
 		Target d = new Target("bob");
 		d.setName("bib");
@@ -73,6 +82,8 @@ public class ProjectTest {
 		p.setDefaultTarget(d);
 		assertEquals(d, p.getDefaultTarget());
 		assertEquals("bib", p.getDefaultTarget().getName());
+		p.setDefaultTarget(null);
+		assertEquals(null, p.getDefaultTarget());
 	}
 
 }

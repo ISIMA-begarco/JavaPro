@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CommitComments></CommitComments>
+<CommitComments>	<CommitComment>idem</CommitComment>
+	<CommitComment>encore</CommitComment>
+	<CommitComment>des trucs apparemment pas commit</CommitComment>
+	<CommitComment>change of build.xml</CommitComment>
+	<CommitComment>amélioration couverture Project</CommitComment>
+	<CommitComment>Dernier essai de modif du build.xml</CommitComment>
+	<CommitComment>essai de changement 5</CommitComment>
+	<CommitComment>test changement 4</CommitComment>
+	<CommitComment>essai de changement 3</CommitComment>
+	<CommitComment>essai de changement 2</CommitComment>
+</CommitComments>

@@ -31,6 +31,9 @@ public class MainAntTest {
 
 	@Test
 	public void testMain() {
+		MainAnt m = new MainAnt();
+		assertTrue(m.getClass() == MainAnt.class);
+		m = null;
 		String[] args = new String[3];
 		args[0] = "mybuild.txt";
 		args[1] = "default";
